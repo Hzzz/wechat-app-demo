@@ -15,7 +15,8 @@
 │   ├── about
 │   └── logs
 ├── static
-│   └── logo.png
+│   └── static
+│ 		└──logo.png
 └── utils
     └── util.js
 ```
