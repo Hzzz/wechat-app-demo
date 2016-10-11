@@ -1,0 +1,27 @@
+
+.detail {
+    margin: 100px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.avatar {
+    width: 200rpx;
+    height: 200rpx;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+
+.username {
+    font-weight: 600;
+    color: #111;
+}
+
+.item {
+    margin-top: 30px;
+    text-align: center;
+    color: #666;
+}

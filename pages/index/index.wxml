@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<loading hidden="{{loading}}">
+  加载中...
+</loading>
+<view class="tab-area">
+  <view class="tab-item {{type == 'hot'? 'active' : ''}}" data-type="hot" bindtap="switchList">最热</view>
+  <view class="tab-item {{type == 'latest'? 'active' : ''}}" data-type="latest" bindtap="switchList">最新</view>
+</view>
+<swiper class="swiper-area" duration="400" current="{{tabIndex}}" bindchange='swiperChange'>
+  <swiper-item>
+    <scroll-view class="list" style="height:100%;" scroll-y="true" bindscrolltoupper="refresh">
+      <view class="item" wx:for="{{messages}}" wx:for-item="message">
+        <navigator url="../detail/detail?id={{message.member.id}}">
+          <image class="avatar" src="{{message.member.avatar_normal}}"></image>
+        </navigator>
+        
+        <view class="info">
+          <text class="title">{{message.title}}</text>
+          <text class="tag">{{message.node.title}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view class="list" style="height:100%;" scroll-y="true" bindscrolltoupper="refresh">
+      <view class="item" wx:for="{{messages}}" wx:for-item="message">
+        <navigator url="../detail/detail?id={{message.member.id}}">
+          <image class="avatar" src="{{message.member.avatar_normal}}"></image>
+        </navigator>
+        
+        <view class="info">
+          <text class="title">{{message.title}}</text>
+          <text class="tag">{{message.node.title}}</text>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+<!--<scroll-view class="list" style="height:100%;" scroll-y="true" bindscrolltoupper="refresh">
+  <view class="item" wx:for="{{messages}}" wx:for-item="message">
+    <navigator url="../detail/detail?id={{message.member.id}}">
+      <image class="avatar" src="{{message.member.avatar_normal}}"></image>
+    </navigator>
+    
+    <view class="info">
+      <text class="title">{{message.title}}</text>
+      <text class="tag">{{message.node.title}}</text>
+    </view>
+  </view>
+</scroll-view>-->

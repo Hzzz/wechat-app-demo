@@ -1,0 +1,12 @@
+<view class="detail">
+    <image class="avatar" src="{{user.avatar}}"></image>
+    <label class="item username">
+        <text>{{user.username}}</text>
+    </label>
+    <label class="item">
+        <text>{{user.tag}}</text>
+    </label>
+    <label class="item">
+        <text>{{user.bio}}</text>
+    </label>
+</view>
